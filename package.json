@@ -1,0 +1,12 @@
+{
+  "name": "linkedin-resume",
+  "version": "1.0.0",
+  "main": "parseDataExport.js",
+  "repository": "git@github.com:CodeSchwert/linkedin-resume.git",
+  "author": "CodeSchwert <CodeSchwert@protonmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "papaparse": "^5.3.1"
+  }
+}
