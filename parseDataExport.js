@@ -3,9 +3,19 @@ const fs = require('fs');
 const path = require('path');
 const unzipper = require('unzipper');
 const resumeSchema = require('resume-schema');
+const { program } = require('commander');
+const version = require('./package.json').version;
 const parseDataFiles = require('./lib/parseDataFiles');
 
-const VALIDATE = false;
+program
+  .version(version)
+  .option(
+    '-v, --validate',
+    'optionally validate output resume.json schema',
+    false
+  );
+
+program.parse(process.argv);
 
 const dataExportPath = path.join(__dirname, 'DataExport');
 
@@ -27,13 +37,12 @@ zipFiles.map((zipFile) => {
   unzippedFolders.push(outputDir);
 });
 
-// console.log(unzippedFolders);
-
 // iterate over unpacked folders
 unzippedFolders.map((exportFolder) => {
   const resumeObject = parseDataFiles(exportFolder);
 
-  if (VALIDATE) {
+  if (program.opts().validate) {
+    console.info('Validate Schema');
     resumeSchema.validate(
       resumeObject,
       (err, report) => {
@@ -41,7 +50,7 @@ unzippedFolders.map((exportFolder) => {
           console.error('The resume was invalid:', err);
           return;
         }
-        console.log('Resume validated successfully:', report);
+        console.info('Resume validated successfully:', report);
       },
       (err) => {
         console.error('The resume was invalid:', err);
@@ -49,14 +58,11 @@ unzippedFolders.map((exportFolder) => {
     );
   }
 
-  console.log('exportFolder', exportFolder);
-  // console.log(resumeObject);
-
   /**
    * Merge overrides here!
    */
   if (fs.existsSync('./overrides/override.json')) {
-    console.log('overrides');
+    console.info('Merging override.json');
     const overrides = require('./overrides/override.json');
 
     _.merge(resumeObject, overrides);
