@@ -31,7 +31,7 @@ const zipFiles = fs
 // unzip all the data export zip archives into the DataExport directory
 zipFiles.map((zipFile) => {
   const outputDir = zipFile.split('.zip')[0];
-  fs.createReadStream(zipFile).pipe(
+  fs.createReadStream(`DataExport/${zipFile}`).pipe(
     unzipper.Extract({ path: `DataExport/${outputDir}` })
   );
   unzippedFolders.push(outputDir);
