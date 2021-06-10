@@ -55,5 +55,5 @@ Then use the `validate.js` script to check the `resume.json` file is valid. It's
 Usage:
 
 ```shell
-node validate.js resume <your_resume.json>
+node validate.js resume ./<your_resume.json>
 ```
