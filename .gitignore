@@ -4,3 +4,4 @@ DataExport/*
 !DataExport/.keep
 *.zip
 *resume.json
+overrides/override.json
