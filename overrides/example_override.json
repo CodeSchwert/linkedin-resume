@@ -1,0 +1,128 @@
+{
+  "basics": {
+    "picture": "",
+    "phone": "+64 (22) 653-3014",
+    "website": "https://codeschwert.github.io/",
+    "location": {
+      "address": "Springfield",
+      "postalCode": "RD8",
+      "city": "Whangarei",
+      "countryCode": "NZ",
+      "region": "Northland"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "CodeSchwert",
+        "url": "https://github.com/CodeSchwert"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "nik-ho",
+        "url": "https://www.linkedin.com/in/nik-ho/"
+      },
+      {
+        "network": "Twitter",
+        "username": "@Nik_H0",
+        "url": "https://twitter.com/@Nik_H0"
+      }
+    ]
+  },
+  "volunteer": [
+    {
+      "organization": "New Zealand Riding for the Disabled Association",
+      "position": "Volunteer Sidewalker & Stable Hand",
+      "website": "https://www.rda.org.nz/about-us/rda-groups/whangarei",
+      "startDate": "2018-10-01",
+      "endDate": "2019-02-01",
+      "summary": "- Assistdisabledriders.\n- Caringforhorsesinstables.",
+      "highlights": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Server-Side Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "Node.js",
+        "ExpressJS",
+        "Python",
+        "Flask",
+        "REST",
+        "GraphQL",
+        "Serverless",
+        "NoSQL",
+        "Relational Databases",
+        "Nginx (web servers)"
+      ]
+    },
+    {
+      "name": "Client-Side Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "React",
+        "React Native / Expo",
+        "Redux",
+        "GraphQL (Apollo)",
+        "JAM Stack",
+        "Next.js",
+        "HTML5",
+        "CSS",
+        "SCSS"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Advanced",
+      "keywords": [
+        "Agile",
+        "AWS",
+        "Google Cloud Platform",
+        "Heroku",
+        "Netlify",
+        "CI/CD",
+        "Kubernetes",
+        "Terraform",
+        "Git",
+        "Networking"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Javascript",
+      "fluency": ""
+    },
+    {
+      "language": "Python",
+      "fluency": ""
+    },
+    {
+      "language": "C#",
+      "fluency": ""
+    },
+    {
+      "language": "SQL",
+      "fluency": ""
+    },
+    {
+      "language": "Bash",
+      "fluency": ""
+    },
+    {
+      "language": "Powershell",
+      "fluency": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Historical European Martial Arts",
+      "keywords": [
+        "Martial Arts",
+        "Longsword",
+        "Side-Sword",
+        "Shield"
+      ]
+    }
+  ]
+}

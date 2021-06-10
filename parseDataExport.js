@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const unzipper = require('unzipper');
@@ -54,6 +55,12 @@ unzippedFolders.map((exportFolder) => {
   /**
    * Merge overrides here!
    */
+  if (fs.existsSync('./overrides/override.json')) {
+    console.log('overrides');
+    const overrides = require('./overrides/override.json');
+
+    _.merge(resumeObject, overrides);
+  }
 
   /**
    * Output files!
